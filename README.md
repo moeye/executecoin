@@ -4,25 +4,25 @@ Execute (XCQ) is an experimental new digital currency that enables anonymous, in
 
 <b>Coin Specification</b>
 
-Coin name : ExecuteCoin
-Coin abbreviation	: XCQ
-Address letter : X
-Algorithm : X11
-Block type : Proof-of-Work / Masternode
-Block reward : 50 coins
-POW Reward : 45%
-MN Reward : 55%
-Masternode Collateral : 10000 coins
-Block halving :	210000 blocks
-Premine : 500 Blocks
-Coin supply : 26.25M coins
-Base OS : Ubuntu 18.04 LTS
-RPC port : 7089
-P2P port : 7090
-
-<b>executecoin.conf</b>
-addnode=136.144.171.201
-addnode=183.88.241.175
+Coin name : ExecuteCoin</br>
+Coin abbreviation	: XCQ</br>
+Address letter : X</br>
+Algorithm : X11</br>
+Block type : Proof-of-Work / Masternode</br>
+Block reward : 50 coins</br>
+POW Reward : 45%</br>
+MN Reward : 55%</br>
+Masternode Collateral : 10000 coins</br>
+Block halving :	210000 blocks</br>
+Premine : 500 Blocks</br>
+Coin supply : 26.25M coins</br>
+Base OS : Ubuntu 18.04 LTS</br>
+RPC port : 7089</br>
+P2P port : 7090</br>
+</br>
+<b>executecoin.conf</b></br>
+addnode=136.144.171.201</br>
+addnode=183.88.241.175</br>
 
 For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see https://executecoin.net.
 
