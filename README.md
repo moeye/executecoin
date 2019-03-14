@@ -20,8 +20,8 @@ Base OS : Ubuntu 18.04 LTS</br>
 RPC port : 7089</br>
 P2P port : 7090</br>
 </br>
-<b>executecoin.conf</b>
-
+<b>Node</b></br>
+executecoin.conf</br>
 addnode=136.144.171.201</br>
 addnode=183.88.241.175</br>
 
