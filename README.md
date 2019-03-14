@@ -3,6 +3,7 @@
 Execute (XCQ) is an experimental new digital currency that enables anonymous, instant payments to anyone, anywhere in the world. Execute uses peer-to-peer technology to operate with no central authority managing transactions and issuing money are carried out collectively by the network. ExecuteCoin Core is the name of the open source software which enables the use of this currency.
 
 <b>Coin Specification</b></br>
+
 Coin name : ExecuteCoin</br>
 Coin abbreviation	: XCQ</br>
 Address letter : X</br>
@@ -19,7 +20,8 @@ Base OS : Ubuntu 18.04 LTS</br>
 RPC port : 7089</br>
 P2P port : 7090</br>
 </br>
-<b>executecoin.conf</b></br>
+<b>executecoin.conf</b>
+
 addnode=136.144.171.201</br>
 addnode=183.88.241.175</br>
 
