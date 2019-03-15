@@ -14,7 +14,7 @@ Algorithm : X11</br>
 Block type : Proof-of-Work / Masternode</br>
 Block reward : 50 coins</br>
 Solo Reward : 100%</br>
-POW Reward : 45%</br>
+POW Reward : 45% or 100% (Random)</br>
 MN Reward : 55%</br>
 Masternode Collateral : 10000 coins</br>
 Block halving :	210000 blocks</br>
