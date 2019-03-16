@@ -29,7 +29,7 @@ addnode=136.144.171.201</br>
 addnode=183.88.241.175</br>
 addnode=194.135.92.135</br>
 
-Discord : https://discord.gg/ssf5BCC</br>
+Discord : https://discord.gg/HKFbEzX</br>
 
 For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see https://executecoin.net.
 
