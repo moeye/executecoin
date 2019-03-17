@@ -30,6 +30,7 @@ addnode=183.88.241.175:7090</br>
 addnode=194.135.92.135:7090</br>
 addnode=80.211.47.12:7090</br>
 
+Bitcointalk : https://bitcointalk.org/index.php?topic=5121201.0</br>
 Discord : https://discord.gg/HKFbEzX</br>
 
 For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see https://executecoin.net.
