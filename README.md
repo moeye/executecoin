@@ -25,9 +25,10 @@ P2P port : 7090</br>
 </br>
 <b>Node</b></br>
 executecoin.conf</br>
-addnode=136.144.171.201</br>
-addnode=183.88.241.175</br>
-addnode=194.135.92.135</br>
+addnode=136.144.171.201:7090
+addnode=183.88.241.175:7090
+addnode=194.135.92.135:7090
+addnode=80.211.47.12:7090
 
 Discord : https://discord.gg/HKFbEzX</br>
 
