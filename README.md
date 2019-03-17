@@ -32,6 +32,8 @@ addnode=80.211.47.12:7090</br>
 
 Bitcointalk : https://bitcointalk.org/index.php?topic=5121201.0</br>
 Discord : https://discord.gg/HKFbEzX</br>
+Twitter : https://twitter.com/executeplatform</br>
+Facebook : https://www.facebook.com/executeplatform</br>
 
 For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see https://executecoin.net.
 
