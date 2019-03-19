@@ -28,7 +28,8 @@ executecoin.conf</br>
 addnode=136.144.171.201:7090</br>
 addnode=183.88.241.175:7090</br>
 addnode=194.135.92.135:7090</br>
-addnode=80.211.47.12:7090</br>
+addnode=198.13.40.54:7090</br>
+addnode=80.211.116.50:7090</br>
 
 Bitcointalk : https://bitcointalk.org/index.php?topic=5121201.0</br>
 Discord : https://discord.gg/HKFbEzX</br>
