@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ExecuteCoin Core
+Comment=ExecuteCoin P2P Cryptocurrency
+Comment[de]=Verbinde mit dem ExecuteCoin peer-to-peer Netzwerk
+Comment[fr]=ExecuteCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ExecuteCoin, eşten eşe kriptografik sanal para birimi
+Exec=executecoin-qt %u
+Terminal=false
+Type=Application
+Icon=executecoin128
+MimeType=x-scheme-handler/executecoin;
+Categories=Office;Finance;

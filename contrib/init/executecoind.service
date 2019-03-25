@@ -1,0 +1,22 @@
+[Unit]
+Description=ExecuteCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=executecoincore
+Group=executecoincore
+
+Type=forking
+PIDFile=/var/lib/executecoind/executecoind.pid
+ExecStart=/usr/bin/executecoind -daemon -pid=/var/lib/executecoind/executecoind.pid \
+-conf=/etc/executecoincore/executecoin.conf -datadir=/var/lib/executecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
