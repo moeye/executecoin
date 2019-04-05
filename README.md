@@ -36,7 +36,7 @@ Discord : https://discord.gg/HKFbEzX</br>
 Twitter : https://twitter.com/executeplatform</br>
 Facebook : https://www.facebook.com/executeplatform</br>
 
-For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see http://executecoin.net.
+For more information, as well as an immediately useable, binary version of the ExecuteCoin Core software, see https://www.execute-platform.com/.
 
 License
 ExecuteCoin Core is released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
