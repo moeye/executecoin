@@ -1,0 +1,2 @@
+# run Tincoin-Sentinel every two minutes
+*/2 * * * * cd /var/lib/masternodes/tincoin1/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
