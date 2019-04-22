@@ -81,19 +81,19 @@ This is what you’re waiting to see:
 
 AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./executecoin-cli mnsync status until it looks like this:
 
-
-{
-  "AssetID": 999,
-  "AssetName": "MASTERNODE_SYNC_FINISHED",
-  "AssetStartTime": 1555922063,
-  "Attempt": 0,
-  "IsBlockchainSynced": true,
-  "IsMasternodeListSynced": true,
-  "IsWinnersListSynced": true,
-  "IsSynced": true,
-  "IsFailed": false
-}
-
+</br>
+{</br>
+  "AssetID": 999,</br>
+  "AssetName": "MASTERNODE_SYNC_FINISHED",</br>
+  "AssetStartTime": 1555922063,</br>
+  "Attempt": 0,</br>
+  "IsBlockchainSynced": true,</br>
+  "IsMasternodeListSynced": true,</br>
+  "IsWinnersListSynced": true,</br>
+  "IsSynced": true,</br>
+  "IsFailed": false</br>
+}</br>
+</br>
 
 At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
 
