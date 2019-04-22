@@ -15,9 +15,9 @@ Alternatively to the guide on the ExecuteCoin website, you can also follow the s
 
     cd .executecoin
 
-    rm mncache.dat
+    delete all files excluding "executecoin.conf" and "wallet.dat"
 
-    rm mnpayments.dat
+    cd ..
 
     ./executecoind --daemon --reindex
 
