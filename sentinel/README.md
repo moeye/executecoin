@@ -1,26 +1,25 @@
-# Tincoin Sentinel
+﻿# ExecuteCoin Sentinel
 
 
-Sentinel is an all-powerful toolset for Tincoin.
+Sentinel is an all-powerful toolset for ExecuteCoin.
 
-Sentinel is an autonomous agent for persisting, processing and automating Tincoin V12.2.1 governance objects and tasks, and for expanded functions in upcoming releases.
+Sentinel is an autonomous agent for persisting, processing and automating ExecuteCoin V1.0.0 governance objects and tasks, and for expanded functions in upcoming releases.
 
-Sentinel is implemented as a Python application that binds to a local version 12.2.1 tincoind instance on each Tincoin V12.2.1 Masternode.
+Sentinel is implemented as a Python application that binds to a local version 1.0.0 executecoind instance on each ExecuteCoin V1.0.0 Masternode.
 
-This guide covers installing Sentinel onto an existing 12.2.1 Masternode in Ubuntu 14.04 / 16.04.
+This guide covers installing Sentinel onto an existing 1.0.0 Masternode in Ubuntu 18.04.
 
-Alternatively to the guide on the Tincoin website, you can also follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
+Alternatively to the guide on the ExecuteCoin website, you can also follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
 
+    ./executecoin-cli stop // Adjust according to your root ExecuteCoin directory path
 
-    cd .tincoincore   // Adjust according to your root Tincoin directory path
-
-    ./tincoin-cli stop
+    cd .executecoin
 
     rm mncache.dat
 
     rm mnpayments.dat
 
-    ./tincoind -daemon -reindex
+    ./executecoind --daemon --reindex
 
 
 
@@ -37,15 +36,15 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local Tincoin daemon running is at least version 12.2.1 (120201)
+Make sure the local ExecuteCoin daemon running is at least version 1.0.0 (1000000)
 
-    $ tincoin-cli getinfo | grep version
+    $ ./executecoin-cli getinfo | grep version
 
 ### 2. Install Sentinel
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/tincoinpay/sentinel.git && cd sentinel
+    $ git clone https://github.com/moeye/executecoin/sentinel.git && cd sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -56,43 +55,45 @@ Open sentinel.conf - Run the following command in linux:
 
     $ nano sentinel.conf
 
-Uncomment the #tincoin_conf line, at the top of the file, then adjust the path to your Masternode’s tincoin.conf. Save the file then close it.
+Uncomment the #executecoin_conf line, at the top of the file, then adjust the path to your Masternode’s executecoin.conf. Save the file then close it.
 
-    tincoin_conf=/path/to/tincoin.conf
+    executecoin_conf=/path/to/executecoin.conf
 
 Now run:
 
     $ venv/bin/python bin/sentinel.py
 
-You should see: “tincoind not synced with network! Awaiting full sync before running Sentinel.”
+You should see: “executecoind not synced with network! Awaiting full sync before running Sentinel.”
 This is exactly what we want to see at this stage.
 
 If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
 
 
-## 4. Check That Your Tincoin Wallet is Synced
+## 4. Check That Your ExecuteCoin Wallet is Synced
 
-Go back into your root Tincoin directory, then check the status of your sync:
+Go back into your root ExecuteCoin directory, then check the status of your sync:
 
     cd ..
-    ./tincoin-cli mnsync status
+    ./executecoin-cli mnsync status
 
 
 This is what you’re waiting to see:
 
-AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./tincoin-cli mnsync status until it looks like this:
+AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./executecoin-cli mnsync status until it looks like this:
 
 
-    {
-    “AssetID”: 999,
-    “AssetName”: “MASTERNODE_SYNC_FINISHED”,
-    “Attempt”: 0,
-    “IsBlockchainSynced”: true,
-    “IsMasternodeListSynced”: true,
-    “IsWinnersListSynced”: true,
-    “IsSynced”: true,
-    “IsFailed”: false
-    }
+{
+  "AssetID": 999,
+  "AssetName": "MASTERNODE_SYNC_FINISHED",
+  "AssetStartTime": 1555922063,
+  "Attempt": 0,
+  "IsBlockchainSynced": true,
+  "IsMasternodeListSynced": true,
+  "IsWinnersListSynced": true,
+  "IsSynced": true,
+  "IsFailed": false
+}
+
 
 At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
 
@@ -125,25 +126,25 @@ Run:
 
 Add the following line below to the end of the file:
 
-    * * * * * cd /home/YOURUSERNAME/.tincoincore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+    * * * * * cd /USERNAME/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
 
 
 Make sure you:
 
-1) Change USERNAME to your username.
+1) Change USERNAME to your username (VPS is /root/sentinel).
 2) Hit enter to create another line at the end after this line, or the file will not work.
 
 Save and exit.
 
 ## 8. All Done On Sentinel. Finally Check Your Masternode
 
-Go back into your Tincoin root directory:
+Go back into your ExecuteCoin root directory:
 
     cd ..
 
 Run:
 
-    ./tincoin-cli masternode debug
+    ./executecoin-cli masternode debug
 
 You should see the message “Masternode successfully started.”. If you have followed all the steps outlined in the guide accurately and achieved this result - this is it, you've made it. Congratulations!
 
@@ -152,3 +153,4 @@ You should see the message “Masternode successfully started.”. If you have f
 To view debug output, set the `SENTINEL_DEBUG` environment variable to anything non-zero, then run the script manually:
 
     $ SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
+
